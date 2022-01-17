@@ -1,1 +1,28 @@
-/* Add your code here */
+img {
+    width: 480px;
+    height: 270px;
+    /*float: left;*/
+}
+#blur {
+    filter: blur(4px);
+}
+
+#invert {
+    filter: invert(100%);
+}
+
+#brightness {
+    filter: brightness(25%);
+}
+
+#saturation {
+    filter: saturate(200%);
+}
+
+#sepia {
+    filter: sepia(100%);
+}
+
+#mixed {
+    filter: saturate(100%) sepia(50%) invert(100%);
+}

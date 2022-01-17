@@ -1,6 +1,28 @@
+
 /* The colors used include:
     - teal
     - rgb alpha value of the color above
 */
 
 /* Add your code here */
+table {
+    border-collapse: collapse;
+}
+tr {
+    border: 1px solid gray;
+}
+
+.elem_rows:hover {
+    background-color: rgba(0, 80, 80, .1);
+}
+
+th {
+    padding: 10px;
+    background-color: teal;
+    color: white;
+}
+
+td {
+    padding: 10px;
+    
+}

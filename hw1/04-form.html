@@ -9,7 +9,41 @@
     <link rel="stylesheet" href="04-form.css" />
   </head>
   <body>
-    <!-- 04 - Form Exercise -->
-    <!-- Add your code below -->
+    <div id="formwrapper">
+      <form action="http://10.218.129.140/index.php?op=form1" method="post">
+        <center><h1>Intro Survey</h1></center>
+        <b>Name (required)</b><br/>
+        <input class="tfield" type="text" name="username" required/>
+        <b>Email (required)</b><br/>
+        <input class="tfield" type="email" name="email" required/><br/><br/>
+        <b>Registration status:</b><br/>
+        <select name="reg_status">
+          <option value="registered">Registered</option>
+          <option value="waitlisted">Waitlisted</option>
+          <option value="dropped">Dropped</option>
+        </select><br/><br/>
+        <b>Class Section:</b><br/>
+        <input type="radio" id="cs410" name="cs410" value="cs410"/>
+        <label for="cs410">cs410</label>
+        <input type="radio" id="cs510" name="cs510" value="cs510"/>
+        <label for="cs510">cs510</label><br/><br/>
+        <b>Have you taken any of the following courses?</b><br/>
+        <input type="checkbox" id="languages" value="languages" name="languages"/>
+        <label for="languages">Programming Languages</label><br/>
+        <input type="checkbox" id="OS" value="OS" name="OS"/>
+        <label for="OS">Intro to Operating Systems</label><br/>
+        <input type="checkbox" id="full_stack" value="full_stack" name="full_stack"/>
+        <label for="full_stack">Full Stack Web Development</label><br/>
+        <input type="checkbox" id="databases" name="databases" value="databases"/>
+        <label for="databases">Intro to Databases</label><br/>
+        <input type="checkbox" name="self_taught" value="self_taught" id="self_taught"/>
+        <label for="self_taught">Learned on your own outside of classes</label><br/>
+        <br/><b>Any other important information?</b>
+        <textarea rows="8" cols="64" id="otherinfo" name="otherinfo"></textarea>
+        <input type="submit" class="submitbtn" name="enter" value="submit" id="complete"/>    
+        <input type="reset" class="submitbtn" value="reset"/>
+            
+      </form>
+    </div>
   </body>
 </html>
