@@ -11,7 +11,7 @@
     />
     <script defer src="05-background.js"></script>
   </head>
-  <body>
+  <body id="background" onload="start_changer(5)">
     <main>
       <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
         <h1 class="mt-2 mb-4">Background Color</h1>
@@ -24,10 +24,10 @@
         </div>
         <div class="form-group">
           <label for="interval">Background change interval (seconds): </label>
-          <input type="number" value="3" id="interval" disabled />
+          <input type="number" value="3" id="interval" name="interval" disabled />
         </div>
         <div class="form-group mt-4">
-          <input type="button" class="btn btn-danger" value="Stop" />
+          <input type="button" class="btn btn-danger" value="Stop" onclick="stop()" id="stopbtn"/>
         </div>
       </form>
     </main>
