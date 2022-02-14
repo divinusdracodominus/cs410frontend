@@ -1,0 +1,44 @@
+@media screen and (min-width: 1200px) {
+    #formwrapper {
+        width: 40%;
+        margin-left:30%;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+    #formwrapper {
+        width: 80%;
+        margin-left:10%;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    #formwrapper {
+        width: 100%;
+    }
+}
+#formwrapper{
+    float: left;
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+body {
+    background-color: darkslateblue;
+}
+.tfield {
+    width: 95%;
+    
+    margin-right: 10%;
+}
+
+.submitbtn {
+    width: 46%;
+    float:left;
+    border: 1px rgb(00,80,80);
+    min-height: 30px;
+    margin: 2%;
+}
+
+textarea {
+    max-width: 100%;
+}

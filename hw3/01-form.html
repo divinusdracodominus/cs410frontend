@@ -4,17 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Form Exercise</title>
+    <title>Form Exercise</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script defer src="01-form.js"></script>
+    <link rel="stylesheet" href="01-form.css" />
   </head>
-  <body class="bg-dark text-dark">
-    <main>
-      <h1>Contact Form</h1>
-      <form action="">
-        <!-- Step 1 - Insert your previous form here -->
-        <!-- Step 2 - Address any responsiveness and/or accessibility issues -->
+  <body>
+    <div id="formwrapper">
+      <form>
+        <center><h1>Intro Survey</h1></center>
+        <b>Name (required)</b><br/>
+        <input class="tfield" type="text" name="username" id="username" required/>
+        <b>Email (required)</b><br/>
+        <input class="tfield" type="email" name="email" id="email" required/><br/><br/>
+        <b>Registration status:</b><br/>
+        <select name="reg_status" id="reg_status">
+          <option value="registered">Registered</option>
+          <option value="waitlisted">Waitlisted</option>
+          <option value="dropped">Dropped</option>
+        </select><br/><br/>
+        <b>Class Section:</b><br/>
+        <input type="radio" id="cs410" name="class_sec" value="cs410" required/>
+        <label for="cs410">cs410</label>
+        <input type="radio" id="cs510" name="class_sec" value="cs510"/>
+        <label for="cs510">cs510</label><br/><br/>
+        <b>Have you taken any of the following courses?</b><br/>
+        <input type="checkbox" id="languages" value="languages" name="classes_taken" class="classes_taken"/>
+        <label for="languages">Programming Languages</label><br/>
+        <input type="checkbox" id="OS" value="OS" name="classes_taken" class="classes_taken"/>
+        <label for="OS">Intro to Operating Systems</label><br/>
+        <input type="checkbox" id="full_stack" value="full_stack" name="classes_taken" class="classes_taken"/>
+        <label for="full_stack">Full Stack Web Development</label><br/>
+        <input type="checkbox" id="databases" name="classes_taken" value="databases" class="classes_taken"/>
+        <label for="databases">Intro to Databases</label><br/>
+        <input type="checkbox" name="classes_taken" value="self_taught" id="self_taught" class="classes_taken"/>
+        <label for="self_taught">Learned on your own outside of classes</label><br/>
+        <input type="checkbox" name="classes_taken" value="none of the above" id="none_of_above" class="classes_taken"/>
+        <label for="none_of_above">None of the above</label><br/>
+        <br/><b>Any other important information?</b>
+        <textarea rows="8" cols="64" id="otherinfo" name="otherinfo" id="other info"></textarea>
+        <!-- 
+            a form is purely a means of sending data to backend, so to use it submit in place of a button feels wrong
+        --><input type="button" onclick="form_enter()" class="submitbtn" name="enter" value="submit" id="complete"/>    
+        <input type="reset" class="submitbtn" value="reset"/>
+         
       </form>
-    </main>
+      <script src="./01-form.js"></script>
+    </div>
   </body>
 </html>
