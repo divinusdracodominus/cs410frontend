@@ -2,6 +2,10 @@ body {
   background-color: var(--cyan);
 }
 
+.charDisplay {
+    width: 250px;
+}
+
 h1 {
   text-align: center;
 }

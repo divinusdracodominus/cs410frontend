@@ -31,21 +31,44 @@ let url = 'https://thronesapi.com/api/v2/Characters';
 
 let renderChart = () => {
   let donutChart = document.getElementById('donut-chart');
-
+  fetch(url).then(response => response.json()).then(resp => { 
+  var houses = [];
+  var count = [];
+  resp.forEach(element => {
+    console.log("element: " + JSON.stringify(element));
+    let index = houses.indexOf(element.family); 
+	console.log("index: " + index);  
+    if(index < 0) {
+        houses.push(element.family);
+        count.push(1);
+    }else{
+        count[index] += 1;
+    } 
+  }); 
+  var newhouses = [];
+  var newcount = [];
+  count.forEach((item, index) => {
+    if(item > 2) {
+      newhouses.push(houses[index]);
+      newcount.push(item);
+    }
+  });
+ 
   new Chart(donutChart, {
     type: 'doughnut',
     data: {
-      labels: ['label', 'label', 'label', 'label'],
+      labels: newhouses,
       datasets: [
         {
           label: 'My First Dataset',
-          data: [1, 12, 33, 5],
+          data: newcount,
           backgroundColor: backgroundColors,
           borderColor: borderColors,
           borderWidth: 1,
         },
       ],
     },
+  });
   });
 };
 
